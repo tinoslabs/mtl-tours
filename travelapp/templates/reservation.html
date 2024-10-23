@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+    {%load static%}
+    <head>
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/click-scroll.js' %}"></script>
+        <script src="{% static 'js/vegas.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>MTL Tours and Travels</title>
+
+        <!-- CSS FILES -->                
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/vegas.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tooplate-barista.css' %}">
+<!--
+
+Tooplate 2137 Barista
+
+https://www.tooplate.com/view/2137-barista-cafe
+
+Bootstrap 5 HTML CSS Template
+
+-->
+
+
+    </head>
+    
+    <body class="reservation-page">
+                
+            <main>
+                <nav class="navbar navbar-expand-lg">                
+                    <div class="container">
+                        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                            <!-- <img src="{% static 'images/coffee-beans.png' %}" class="navbar-brand-image img-fluid" alt="Barista Cafe Template"> -->
+                            MTL Tours And Travels
+                        </a>
+        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-lg-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{% url 'index' %}#section_1">Home</a>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{% url 'index' %}#section_2">About</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{% url 'category_selection' %}">Our Packages</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{% url 'index' %}#section_4">Reviews</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{% url 'index' %}#section_5">Contact</a>
+                                </li>
+                            </ul>
+
+                            <div class="ms-lg-3">
+                                <a class="btn custom-btn custom-border-btn" href="{% url 'reservation' %}">
+                                    Reservation
+                                    <i class="bi-arrow-up-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                
+
+            
+          
+                
+                
+
+                <section class="section-padding" style="background-image: url('{% static 'images/anantha-krishnan-ujWOkDY8VlI-unsplash.jpg' %}');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: relative;">
+
+                    <div class="container">
+                        <div class="row justify-content-center"> <!-- Center align the row -->
+                            <div class="col-lg-10 col-12">
+                                <div class="booking-form-wrap text-center"> <!-- Center align the form -->
+                                    <div class="row justify-content-center"> <!-- Center align the form within the container -->
+                                        <div class="col-lg-7 col-12 p-0">
+                                            <form class="custom-form booking-form" action="{% url 'submit_booking' %}" method="post" role="form">
+                                                {% csrf_token %}
+                                                <div class="mb-4 pb-lg-2">
+                                                    <h2 class="text-white">Book a slot</h2>
+                                                </div>
+
+                                              
+                                                <div class="booking-form-body">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-12">
+                                                            <input type="text" name="booking-form-name" id="booking-form-name" class="form-control" placeholder="Full Name" required>
+                                                        </div>
+                                                        <div class="col-lg-6 col-12">
+                                                            <input type="tel" class="form-control" name="booking-form-phone" placeholder="+91 9999900000" required="">
+                                                        </div>
+                                                        <div class="col-lg-6 col-12">
+                                                            <input class="form-control" type="time" name="booking-form-time" value="18:30">
+                                                        </div>
+                                                        <div class="col-lg-6 col-12">
+                                                            <input type="date" name="booking-form-date" id="booking-form-date" class="form-control" placeholder="Date" required="">
+                                                        </div>
+                                                        <div class="col-lg-12 col-12">
+                                                            <input type="number" name="booking-form-number" id="booking-form-number" class="form-control" placeholder="Number of People" required="">
+                                                            <select name="booking-form-category" id="booking-form-category" class="form-control" required>
+                                                                <option value="" disabled selected>Select Category</option>
+                                                                {% for category in categories %}
+                                                                    <option value="{{ category.id }}">{{ category.heading }}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                            <select name="booking-form-package" id="booking-form-package" class="form-control" required>
+                                                                <option value="" disabled selected>Select Package</option>
+                                                                <!-- Packages will be dynamically populated using JavaScript -->
+                                                            </select>
+                                                            <textarea name="booking-form-message" rows="3" class="form-control" id="booking-form-message" placeholder="Comments" required></textarea>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-10 col-8 mx-auto mt-2"> <!-- Adjust column width as needed -->
+                                                            <button type="submit" class="form-control">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <div id="success-message" class="success-message"></div>
+
+                <footer class="site-footer" style="background-color: #342a76;">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-12 me-auto">
+                                <p class="text-white d-block mb-4">Where to find us?</p>
+
+                                <strong class="text-white">
+                                    <i class="bi-geo-alt me-2"></i>
+                                    MTL TOURS & TRAVELS 19/272 - Thuthiyoor,
+                                    CSEZ KAKKANAD ,
+                                    ERNAKULAM KERALA -INDIA - 682037
+                                </strong>
+
+                                <ul class="social-icon mt-4">
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-facebook">
+                                        </a>
+                                    </li>
+        
+                                    <li class="social-icon-item">
+                                        <a href="https://x.com/minthu" target="_new" class="social-icon-link bi-twitter">
+                                        </a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-whatsapp">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+                                <p class="text-white d-block mb-4">Contact</p>
+
+                                <p class="d-flex mb-1">
+                                    <strong class="me-2">Phone:</strong>
+                                    <a href="tel: 305-240-9671" class="site-footer-link">
+                                        +91 9746145768
+                                    </a>
+                                </p>
+
+                                <p class="d-flex">
+                                    <strong class="me-2">Email:</strong>
+
+                                    <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                        mtltoursandtravels@gmail.com
+                                    </a>
+                                </p>
+                            </div>
+
+
+                            <div class="col-lg-5 col-12">
+                                <p class="text-white d-block mb-4">Opening Hours.</p>
+
+                                <ul class="opening-hours-list">
+                                    <li class="d-flex">
+                                        Monday - Friday
+                                        <span class="underline"></span>
+
+                                        <strong>09:00AM — 05:00PM
+
+                                        </strong>
+                                    </li>
+
+                                    <!-- <li class="d-flex">
+                                        Saturday
+                                        <span class="underline"></span>
+
+                                        <strong>11:00 - 16:30</strong>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        Sunday
+                                        <span class="underline"></span>
+
+                                        <strong>Closed</strong>
+                                    </li> -->
+                                </ul>
+                            </div>
+
+                            <!-- <div class="col-lg-8 col-12 mt-4">
+                                <p class="copyright-text mb-0">Copyright © Barista Cafe 2048 
+                                    - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
+                            </div> -->
+                    </div>
+                </footer>
+            </main>
+
+
+  
+
+    </body>
+
+    <script>
+            // jQuery document ready function
+    $(document).ready(function () {
+        // Function to fetch and populate packages based on the selected category
+        function populatePackages(categoryId) {
+            // Clear existing options
+            $('#booking-form-package').empty();
+
+            // Add default option
+            $('#booking-form-package').append('<option value="" disabled selected>Select Package</option>');
+
+            // Fetch packages for the selected category via AJAX (modify the URL as per your Django view)
+            $.ajax({
+                url: '/get_packages/' + categoryId + '/',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    // Populate options based on the received data
+                    $.each(data.packages, function (index, package) {
+                        $('#booking-form-package').append('<option value="' + package.id + '">' + package.name + '</option>');
+                    });
+                },
+                error: function () {
+                    console.error('Failed to fetch packages.');
+                }
+            });
+        }
+
+        // Event listener for category selection change
+        $('#booking-form-category').change(function () {
+            var selectedCategoryId = $(this).val();
+            if (selectedCategoryId) {
+                // Populate packages based on the selected category
+                populatePackages(selectedCategoryId);
+            } else {
+                // Clear packages if no category is selected
+                $('#booking-form-package').empty();
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        // Function to show success message
+        function showSuccessMessage() {
+            $('#success-message').text('Your booking has been successfully submitted !!!  ');
+            $('#success-message').fadeIn();
+            setTimeout(function () {
+                $('#success-message').fadeOut();
+                resetForm();
+            }, 5000); // 5 seconds
+        }
+
+        // Function to reset form fields
+        function resetForm() {
+            $('.booking-form').trigger('reset');
+        }
+
+        // Event listener for form submission
+        $('.booking-form').submit(function (event) {
+            event.preventDefault();
+            // Perform form submission via AJAX or submit it normally
+            // After successful submission, call showSuccessMessage() function
+            showSuccessMessage();
+        });
+    });
+    </script>
+    <style>
+        .success-message {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #776cc2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+
+    </style>
+</html>

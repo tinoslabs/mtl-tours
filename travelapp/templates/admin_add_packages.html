@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="home">
+    <div class="toggle-sidebar">
+        <i class='bx bx-menu'></i>
+        <div class="text"></div>
+    </div>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Add Package</div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data" id="imageUploadForm">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="category">Select Category</label>
+                            <select class="form-control" id="category" name="category">
+                                {% for category in categories %}
+                                    <option value="{{ category.id }}">{{ category.heading }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Package Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Package Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="number" class="form-control" id="price" name="price" placeholder="Enter Price" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter Description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="image">Upload Featured Image</label>
+                            <input type="file" class="form-control-file" id="image" name="image" accept="image/*" multiple required>
+                            <small>Please upload images with dimensions equal to or greater than 4621px x 3072px.</small>
+                        </div>
+                        
+
+                        <button type="submit" class="btn" style="background: #776cc2; color: aliceblue;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- JavaScript -->
+<script src="{% static 'ad/js/jquery.min.js' %}"></script>
+<script src="{% static 'ad/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'ad/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'ad/js/bootstrap-select.min.js' %}"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize CKEditor
+    ClassicEditor
+        .create(document.querySelector('#description'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+
+document.getElementById('imageUploadForm').addEventListener('submit', function(event) {
+    var fileInput = document.getElementById('image');
+    var file = fileInput.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        var img = new Image();
+        img.onload = function() {
+            var minWidth = 4621;
+            var minHeight = 3072;
+            if (this.width < minWidth || this.height < minHeight) {
+                alert('Image dimensions must be at least ' + minWidth + 'px x ' + minHeight + 'px.');
+                event.preventDefault(); // Prevent form submission
+            } else {
+                // Image dimensions are valid, submit the form
+                // Optionally, you can remove this else block if you want to submit form regardless of image dimensions
+            }
+        };
+        img.src = e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+});
+
+</script>
+{% endblock %}

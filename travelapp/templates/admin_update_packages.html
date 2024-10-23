@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTL Tours And Travels</title>
+       <!-- Box Icons  -->
+       <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+       <link rel="stylesheet" href="{% static 'asset/css/font-awesome.min.css' %}">
+       <!-- Styles  -->
+       <link rel="shortcut icon" href="{% static 'asset/img/kxp_fav.png' %}" type="image/x-icon">
+       <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+       <link rel="stylesheet" href="{% static 'asset/assets/css/style.css' %}">
+         <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="{% static 'ad/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/quill.snow.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/fonts/line-icons/style.css' %}">
+    
+</head>
+
+
+
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="{% url 'admin_dashboard' %}" class="logo-box">
+           <!-- <img src="{% static 'assets/images/product/logo.png' %}" class="img-fluid" width="70" height="30" alt="Logo"> -->
+           <div class="logo-name">MTL Tours And Travels</div>
+        </a>
+
+             <!-- ========== List ============  -->
+        <!-- <ul class="sidebar-list"> -->
+            <!-- -------- Non Dropdown List Item ------- -->
+            <!-- <li>
+                <div class="title">
+                    <a href="admin_dashboard" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
+                    
+                </div>
+                <div class="submenu">
+                    <a href="admin_dashboard" class="link submenu-title">Dashboard</a>
+                </div>
+            </li> -->
+
+            
+
+            <!-- <li class="dropdown">
+                <div class="title">
+                    <a href="admin_water_dispensers_view" class="link">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="name">Water Dispenser</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="" class="link submenu-title">Water Dispensers</a>
+                    <a href="admin_add_water_dispensers" class="link">Add Water Dispensers</a>
+                    <a href="admin_water_dispensers_view" class="link">View Water Dispensers</a>
+                    
+                </div>
+            </li> -->
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <!-- <li class="dropdown">
+                <div class="title">
+                    <a href="admin_accessories_view" class="link">
+                        <i class='bx bx-collection'></i>
+                        <span class="name">Accessories</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="" class="link submenu-title">Accessories</a>
+                    <a href="admin_add_accessories" class="link">Add Accessories</a>
+                    <a href="admin_accessories_view" class="link">View Accessories</a>
+                    
+                </div>
+            </li> -->
+
+            
+
+            <!-- <li class="dropdown">
+                <div class="title">
+                    <a href="admin_enquiries_view" class="link">
+                        <i class='bx bx-collection'></i>
+                        <span class="name">Enquiries</span>
+                    </a>
+                </div>
+            </li> -->
+
+            <!-- <li>
+                <div class="title">
+                    <a href="admin_enquiries_view" class="link">
+                        
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        <span class="name">Enquiries</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="admin_enquiries_view" class="link submenu-title">Enquiries</a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li> -->
+
+            <!-- <li>
+                <div class="title">
+                    <a href="admin_contact_view" class="link">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="name">Contact History</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="admin_contact_view" class="link submenu-title">Contact History</a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li> -->
+
+
+            <!-- -------- Dropdown List Item ------- -->
+           
+            <!-- {% if user.is_authenticated %}
+            <li>
+                <div class="title">
+                    <a href="logout_user" class="link">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <span class="name">Sign Out</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="logout_user" class="link submenu-title">Sign Out </a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li>
+            {% else %}
+            <li> -->
+                <!-- <div class="title">
+                    <a href="login_user" class="link">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <span class="name">Sign In</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="login_user" class="link submenu-title">Sign In</a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li>
+            {% endif %}
+        </ul> -->
+    </div>
+    <!-- <title>Add Package - JobBoard</title> -->
+    
+  
+<body>
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+            <div class="text"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Update Package</div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="category">Select Category</label>
+                                    <select class="form-control" id="category" name="category">
+                                        {% for category in categories %}
+                                            <option value="{{ category.id }}" {% if category.id == package.category.id %} selected {% endif %}>{{ category.heading }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="name">Package Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Package Name" value="{{package.name}}" required>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="price">Price</label>
+                                    <input type="number" class="form-control" id="price" name="price" placeholder="Enter Price" value="{{package.price}}" required>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter Description" >{{ package.description|safe }}</textarea>
+                                </div>
+
+                                
+        
+                                <div class="form-group">
+                                    <label for="current_images">Current Featured Images</label>
+                                    <div class="image-grid">
+                                        {% for image in package.images.all %}
+                                            <div class="image-item">
+                                                <img src="{{ image.image.url }}" alt="Package Image">
+                                                <input type="checkbox" name="remove_image" value="{{ image.id }}"> Remove
+                                            </div>
+                                        {% empty %}
+                                            <p>No images uploaded</p>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                        
+                            
+                                <div class="form-group">
+                                    <label for="new_images">Select New Images</label>
+                                    <input type="file" class="form-control-file" id="new_images" name="image" accept="image/*" multiple>
+                                    <small>Please upload images with dimensions equal to or greater than 4621px x 3072px.</small>
+                                </div>
+                                
+                                
+        
+                                <button type="submit" class="btn" style="background: #776cc2; color: aliceblue;">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<script src="{% static 'ad/js/jquery.min.js' %}"></script>
+<script src="{% static 'ad/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'ad/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'ad/js/bootstrap-select.min.js' %}"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // Initialize CKEditor
+    ClassicEditor
+        .create(document.querySelector('#description'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+</script>
+
+</body>
+
+<style>
+    .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+}
+
+.image-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.image-item img {
+    max-width: 60%;
+    height: 100px;
+    display: block;
+}
+
+.image-item input[type="checkbox"] {
+    /* position: absolute; */
+    top: 5px;
+    right: 5px;
+}
+
+</style>
+</html>
+

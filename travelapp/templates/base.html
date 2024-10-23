@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTL Tours and Travels</title>
+
+    <!-- Box Icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'asset/css/font-awesome.min.css' %}">
+    <!-- Styles  -->
+    <link rel="shortcut icon" href="{% static 'asset/img/kxp_fav.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'asset/assets/css/style.css' %}">
+    <style>
+
+    </style>
+    <!-- <title>JobBoard &mdash; Website Template by Colorlib</title> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link rel="stylesheet" href="{% static 'ad/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/quill.snow.css' %}">
+    
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'ad/css/style.css' %}">
+
+    <style>
+           .table-1{
+                width:100%;
+            }
+        .table-header{
+            display:flex;
+            justify-content:space-between;
+            /* align-items:center; */
+            padding:20px 0;
+            background-color:rgb(240,240,240);
+            flex:wrap;
+        }
+        .table-header p{
+            color:#000000;
+            font-size:25px;
+
+        }
+        .add_new{
+            padding:10px 20px;
+            color:#ffffff;
+            background-color:#2a2185;
+        }
+
+        button{
+            outline:none;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            padding:6px;
+            color:#ffffff;
+        }
+        td button:nth-child(1){
+            background-color:#2a2185;
+        }
+        td button:nth-child(2){
+            background-color:red;
+        }
+
+        .table-section{
+            height:650px;
+            overflow:auto;
+        }
+        table{
+            width:100%;
+            table-layout:fixed;
+            min-width:900px;
+            border-collapse:collapse;
+        }
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: #f6f9fc;
+            color: #2a2185;
+            font-size: 15px;
+            z-index: 1; /* Ensure headers stay above content */
+        }
+
+/* Vertical alignment and styling for table cells */
+th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    vertical-align: top; /* Align content at the top of each cell */
+    /* text-align:center; */
+}
+
+
+
+/* Styling for images inside table cells */
+td img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border: 5px solid #ced0d2;
+}
+        tr:hover td{
+            color:#0298cf;
+            cursor:pointer;
+            background-color:#f6f9fc;
+        }
+        /* .pagination{
+            display:flex;
+            justify-content:flex-end;
+            width:100%;
+            padding:10px 20px;
+            background:#8493a5;
+        }
+        .pagination div{
+            padding:10px;
+            border:2px solid #d5d0d0
+            height:40px;
+            width:40px;
+            border-radius:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:#2a2185;
+            color:#ffffff;
+            box-shadow:0px 0px 4px 0px rgba(0,0,0,0.75);
+            margin:0 5px;
+            cursor:pointer;
+        } */
+        ::webkit-scrollbar{
+            height:5px;
+            width:5px;
+        }
+        ::webkit-scrollbar-track{
+            box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
+        }
+        ::webkit-scrollbar-thumb{
+            box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
+        }
+
+    </style>
+
+    </style>
+       
+<!-- </head>
+<body id="top"> -->
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="{% url 'admin_dashboard' %}" class="logo-box">
+           <!-- <img src="{% static 'assets/images/product/logo.png' %}" class="img-fluid" width="70" height="30" alt="Logo"> -->
+            <div class="logo-name">MTL Tours And Travels</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li>
+                <div class="title">
+                    <a href="admin_dashboard" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
+                    
+                </div>
+                <div class="submenu">
+                    <a href="admin_dashboard" class="link submenu-title">Dashboard</a>
+                </div>
+            </li>
+
+            
+
+            <li class="dropdown">
+                <div class="title">
+                    <a href="admin_category_view" class="link">
+                        <i class="fa fa-filter" aria-hidden="true"></i>
+                        <span class="name">Categories</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="" class="link submenu-title">Categories</a>
+                    <a href="admin_add_categories" class="link">Add Categories</a>
+                    <a href="admin_category_view" class="link">View Categories</a>
+                    
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li class="dropdown">
+                <div class="title">
+                    <a href="admin_packages_view" class="link">
+                        <i class='fa fa-suitcase'></i>
+                        <span class="name">Packages</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="" class="link submenu-title">Packages</a>
+                    <a href="admin_add_packages" class="link">Add Packages</a>
+                    <a href="admin_packages_view" class="link">View Packages</a>
+                    
+                </div>
+            </li>
+
+            
+
+            <!-- <li class="dropdown">
+                <div class="title">
+                    <a href="admin_enquiries_view" class="link">
+                        <i class='bx bx-collection'></i>
+                        <span class="name">Enquiries</span>
+                    </a>
+                </div>
+            </li> -->
+
+            <li>
+                <div class="title">
+                    <a href="admin_booking_view" class="link">
+                        
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        <span class="name">Bookings</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="admin_booking_view" class="link submenu-title">Bookings</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+
+            <li>
+                <div class="title">
+                    <a href="admin_contact_view" class="link">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="name">Contact History</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="admin_contact_view" class="link submenu-title">Contact History</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+
+
+            <!-- -------- Dropdown List Item ------- -->
+           
+            {% if user.is_authenticated %}
+            <li>
+                <div class="title">
+                    <a href="logout_user" class="link">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <span class="name">Sign Out</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="logout_user" class="link submenu-title">Sign Out </a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+            {% else %}
+            <li>
+                <div class="title">
+                    <a href="login_user" class="link">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <span class="name">Sign In</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="login_user" class="link submenu-title">Sign In</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+            
+        </ul>
+    </div>
+
+
+    {% block content%}
+    {% endblock %}
+
+
+       <!-- Link JS -->
+       <script src="{% static 'asset/js/main.js' %}"></script>
+
+       <!-- SCRIPTS -->
+<script src="{% static 'ad/js/jquery.min.js' %}"></script>
+<script src="{% static 'ad/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'ad/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'ad/js/stickyfill.min.js' %}"></script>
+<script src="{% static 'ad/js/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'ad/js/jquery.easing.1.3.js' %}"></script>
+
+<script src="{% static 'ad/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'ad/js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'ad/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'ad/js/quill.min.js' %}"></script>
+
+<script src="{% static 'ad/js/bootstrap-select.min.js' %}"></script>
+
+<script src="{% static 'ad/js/custom.js' %}"></script>
+
+</body>
+</html>
+    </body>
+    
+    </html>

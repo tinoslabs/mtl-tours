@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+    {% load static%}
+    <head>
+        
+       
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/click-scroll.js' %}"></script>
+        <script src="{% static 'js/vegas.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>MTL Tours And Travels</title>
+
+
+
+        <!-- CSS FILES -->                
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap" rel="stylesheet">
+            
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/vegas.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tooplate-barista.css' %}">
+
+
+        <!-- <link rel="stylesheet" href="{% static 'css/vegas.min.css' %}"> -->
+
+        <!-- Include jQuery -->
+        <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+      
+        <!-- Include Vegas JS -->
+        <!-- <script src="{% static 'js/vegas.min.js' %}"></script> -->
+        
+<!--
+
+Tooplate 2137 Barista Cafe
+
+https://www.tooplate.com/view/2137-barista-cafe
+
+Bootstrap 5 HTML CSS Template
+
+-->
+    </head>
+
+    
+    <body>
+                
+            <main>
+                
+                 <!-- <div class="hero-slides"></div> -->
+                 <nav class="navbar navbar-expand-lg"> 
+                    
+                    <div class="container"> 
+                        <!-- <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="Barista Cafe Template">
+                            Barista
+                        </a> -->
+                    
+                         <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                            <!-- <img src="{% static 'images/coffee-beans.png' %}" class="navbar-brand-image img-fluid" alt="Barista Cafe Template"> -->
+                            MTL Tours And Travels
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-lg-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="#section_1">Home</a>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="#section_2">About</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{% url 'category_selection' %}">Our Packages</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="#section_4">Reviews</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                                </li>
+                            </ul> 
+
+                             <div class="ms-lg-3">
+                                <a class="btn custom-btn custom-border-btn" href="{% url 'reservation' %}">
+                                    Reservation
+                                    <i class="bi-arrow-up-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>  
+                
+
+                <section class="hero-section" id="section_1">
+                    <div class="hero-slides">
+                        <h1 class="hero-heading">Trust Our Experience</h1>
+                        <h5 class="hero-subheading">A team of professional Travel Experts.</h5>
+                        <h1 class="hero-heading">Explore The World</h1>
+                        <h5 class="hero-subheading">Enjoy the Best Destinations with Our Travel Agency.</h5>
+                        <h1 class="hero-heading">Create Your Tour</h1>
+                        <h5 class="hero-subheading">Build your Next Holiday Trip with Us.</h5>
+                        <!-- Add more headings and subheadings as needed -->
+                    </div>
+                </section>
+                
+
+
+                <section class="about-section section-padding" id="section_2" style="background-color: #5c50bc;">
+                    <div class="section-overlay"></div>
+                    <div class="container">
+                        <div class="row align-items-center">
+
+                            <div class="col-lg-6 col-12">
+                                <div class="ratio ratio-1x1">
+                                    <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                                        <source src="{% static 'videos/vd4.mp4' %}" type="video/mp4">
+
+                                        Your browser does not support the video tag.
+                                    </video>
+
+                                    <div class="about-video-info d-flex flex-column">
+                                        <h4 class="mt-auto">We Started Since 2009.</h4>
+
+                                        <h4>Best Travels and Tours.</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5 col-12 mt-4 mt-lg-0 mx-auto">
+                                <!-- <em class="text-white">Barista.co</em> -->
+
+                                <h2 class="text-white mb-3">About Us</h2>
+
+                                <p class="text-white">MTL tours & travels is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you. </p>
+
+                                <p class="text-white">We are proud to offer excellent quality and value for money in our tours, which give you the chance to experience your chosen destination in an authentic and exciting way.</p>
+
+                                <p class="text-white">Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for every travel service available in the industry.</p>
+                                <a href="{%url 'category_selection'%}" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4">Our Tours</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+              
+
+
+<!--               
+                <div class="container bootstrap snippets bootdey"> -->
+                <section id="services" class="current">
+                    <div class="services-top">
+                        <div class="container bootstrap snippets bootdey">
+                            <div class="row text-center">
+                                <div class="col-sm-12 col-md-12 col-md-12">
+                                    <!-- <h4 >What We Offer</h> -->
+                                    <h4 style="font-size: 50px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Our Services</h4>
+                                    <!-- <p>Our <span class="highlight">experienced</span> and <span class="highlight">dedicated</span> staff provide these services with a smile.</p> -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-1 col-sm-12 col-md-12 col-md-10">
+                                    <div class="services-list">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-4 col-md-4">
+                                                <div class="service-block" style="visibility: visible;">
+                                                    <div class="ico fa fa-magic highlight" ></div>
+                                                    <div class="text-block">
+                                                        <div class="name">Personalized Matching</div>
+                                                        <!-- <div class="info">Beauty and function</div> -->
+                                                        <div class="text">Our unique matching system lets you find just the tour you want for your next holiday.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-md-4">
+                                                <div class="service-block" style="visibility: visible;">
+                                                    <div class="ico fa fa-code highlight"></div>
+                                                    <div class="text-block">
+                                                        <div class="name">Wide Variety of Tours</div>
+                                                        <!-- <div class="info">Quality code that lasts</div> -->
+                                                        <div class="text">We offer a wide variety of personally picked tours with destinations all over the globe.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-md-4">
+                                                <div class="service-block" style="visibility: visible;">
+                                                    <div class="ico fa fa-pencil highlight"></div>
+                                                    <div class="text-block">
+                                                        <div class="name">Highly Qualified Service</div>
+                                                        <!-- <div class="info">Words that tell your story</div> -->
+                                                        <div class="text">Our tour managers are qualified, skilled, and friendly to bring you the best service. </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br><br><br><br><br><br>
+                                            <div class="col-sm-6 col-md-4 col-md-4">
+                                                <div class="service-block" style="visibility: visible;">
+                                                    <div class="ico fa fa-bullhorn highlight"></div>
+                                                    <div class="text-block">
+                                                        <div class="name">24/7 Support</div>
+                                                        <!-- <div class="info">Converting users to customers</div> -->
+                                                        <div class="text">You can always get professional support from our staff 24/7 and ask any question you have. </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-md-4">
+                                                <div class="service-block" style="visibility: visible;">
+                                                    <div class="ico fa fa-eye highlight"></div>
+                                                    <div class="text-block">
+                                                        <div class="name">Handpicked Hotels</div>
+                                                        <!-- <div class="info">Leave a lasting impression</div> -->
+                                                        <div class="text">Our team offers only the best selection of affordable and luxury hotels to our clients. </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-md-4">
+                                                <div class="service-block" style="visibility: visible;">
+                                                    <div class="ico fa fa-umbrella highlight"></div>
+                                                    <div class="text-block">
+                                                        <div class="name">Best Price Guarantee</div>
+                                                        <!-- <div class="info">Thinking beyond tomorrow</div> -->
+                                                        <div class="text">If you find tours that are cheaper than ours, we will compensate the difference. </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+          
+                <section class="section-padding section-bg" id="barista-team">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                                <h2 class="text-white">Hot Tours</h2>
+                            </div>
+                            {% for category in categories %}
+                                {% if forloop.counter0|divisibleby:4 %}
+                                    {% if forloop.counter <= 4 %}
+                                        </div><div class="row justify-content-center">
+                                    {% endif %}
+                                {% endif %}
+                                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                    <div class="team-block-wrap custom-card-height">
+                                        <div class="team-block-info d-flex flex-column">
+                                            <div class="d-flex mt-auto mb-3">
+                                                <a href="{% url 'package_view' category.id %}">
+                                                    <h4 class="text-white mb-0">{{ category.heading }}</h4>
+                                                </a>
+                                            </div>
+                                            <!-- Add any additional information here -->
+                                        </div>
+                                        <div class="team-block-image-wrap">
+                                            <a href="{% url 'package_view' category.id %}">
+                                                {% if category.image %}
+                                                    <img src="{{ category.image.url }}" class="team-block-image img-fluid" alt="">
+                                                {% else %}
+                                                    <!-- Display a placeholder image or message if the image is not uploaded -->
+                                                    <img src="{% static 'images/placeholder_image.jpg' %}" class="team-block-image img-fluid" alt="Could not load image">
+                                                    <!-- Or display a message -->
+                                                    <!-- <p>Could not load image</p> -->
+                                                {% endif %}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+                
+                
+
+
+                <section class="reviews-section section-padding" style="background-color: #201c42;" id="section_4">
+                    <div class="container">
+                        <div class="row justify-content-center">
+
+                            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                                <em class="text-white">Reviews by Customers</em>
+
+                                <h2 class="text-white">Testimonials</h2>
+                            </div>
+
+                            <div class="timeline">
+                                <div class="timeline-container timeline-container-left">
+                                    <div class="timeline-content">
+                                        <div class="reviews-block">
+                                            <div class="reviews-block-image-wrap d-flex align-items-center">
+                                                <img src="{% static 'images/reviews/young-woman-with-round-glasses-yellow-sweater.jpg' %}" class="reviews-block-image img-fluid" alt="">
+
+                                                <div class="">
+                                                    <h6 class="text-white mb-0">Sandra</h6>
+                                                    <em class="text-white"> Customers</em>
+                                                </div>
+                                            </div>
+
+                                            <div class="reviews-block-info">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                                <div class="d-flex border-top pt-3 mt-4">
+                                                    <strong class="text-white">4.5 <small class="ms-2">Rating</small></strong>
+
+                                                    <div class="reviews-group ms-auto">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-container timeline-container-right">
+                                    <div class="timeline-content">
+                                        <div class="reviews-block">
+                                            <div class="reviews-block-image-wrap d-flex align-items-center">
+                                                <img src="{% static 'images/reviews/senior-man-white-sweater-eyeglasses.jpg' %}"class="reviews-block-image img-fluid" alt="">
+
+                                                <div class="">
+                                                    <h6 class="text-white mb-0">Don</h6>
+                                                    <em class="text-white"> Customers</em>
+                                                </div>
+                                            </div>
+
+                                            <div class="reviews-block-info">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                                <div class="d-flex border-top pt-3 mt-4">
+                                                    <strong class="text-white">4.5 <small class="ms-2">Rating</small></strong>
+
+                                                    <div class="reviews-group ms-auto">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-container timeline-container-left">
+                                    <div class="timeline-content">
+                                        <div class="reviews-block">
+                                            <div class="reviews-block-image-wrap d-flex align-items-center">
+                                                <img src="{% static 'images/reviews/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair.jpg' %}" class="reviews-block-image img-fluid" alt="">
+
+                                                <div class="">
+                                                    <h6 class="text-white mb-0">Olivia</h6>
+                                                    <em class="text-white"> Customers</em>
+                                                </div>
+                                            </div>
+
+                                            <div class="reviews-block-info">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                                <div class="d-flex border-top pt-3 mt-4">
+                                                    <strong class="text-white">4.5 <small class="ms-2">Rating</small></strong>
+
+                                                    <div class="reviews-group ms-auto">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="section-padding"  style="
+                background-repeat: no-repeat;
+                background-color: #201c42;
+                background-position: center;" id="section_5">
+                    <div class="container">
+                        <div class="row">   
+
+                            <div class="col-lg-12 col-12">
+                                <em class="text-white">Say Hello</em>
+                                <h2 class="text-white mb-4 pb-lg-2">Contact</h2>
+                                
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <form action="#" method="post" class="custom-form contact-form" role="form" id="contactForm">
+
+                                    {%csrf_token %}
+
+                                <div class="row">
+                                    
+                                    <div class="col-lg-6 col-12">
+                                        <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
+
+                                        <input type="text" style="color: aliceblue;" name="name" id="name" class="form-control" placeholder="Jackson" required="">
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <label for="email" class="form-label">Email Address</label>
+
+                                        <input type="email" name="email" style="color: aliceblue;" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jack@gmail.com" required="">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">How can we help?</label>
+
+                                        <textarea name="message" rows="4" style="color: aliceblue;" class="form-control" id="message" placeholder="Message" required=""></textarea>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-5 col-12 mx-auto mt-3">
+                                    <button type="submit" style="background-color: #776cc2" class="form-control">Send Message</button>
+                                </div>
+                            </form>
+                            </div>
+
+                            <div class="col-lg-6 col-12 mx-auto mt-5 mt-lg-0 ps-lg-5">
+                                <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5039.668141741662!2d72.81814769288509!3d19.043340656729775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c994f34a7355%3A0x2680d63a6f7e33c2!2sLover%20Point!5e1!3m2!1sen!2sth!4v1692722771770!5m2!1sen!2sth" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+
+                <footer class="site-footer" style="background-color: #342a76;">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-12 me-auto">
+                                <p class="text-white d-block mb-4">Where to find us?</p>
+
+                                <strong class="text-white">
+                                    <i class="bi-geo-alt me-2"></i>
+                                    MTL TOURS & TRAVELS 19/272 - Thuthiyoor,
+                                    CSEZ KAKKANAD ,
+                                    ERNAKULAM KERALA -INDIA - 682037
+                                </strong>
+
+                                <ul class="social-icon mt-4">
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-facebook">
+                                        </a>
+                                    </li>
+        
+                                    <li class="social-icon-item">
+                                        <a href="https://x.com/minthu" target="_new" class="social-icon-link bi-twitter">
+                                        </a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-whatsapp">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+                                <p class="text-white d-block mb-4">Contact</p>
+
+                                <p class="d-flex mb-1">
+                                    <strong class="me-2">Phone:</strong>
+                                    <a href="tel: 305-240-9671" class="site-footer-link">
+                                        +91 9746145768
+                                    </a>
+                                </p>
+
+                                <p class="d-flex">
+                                    <strong class="me-2">Email:</strong>
+
+                                    <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                        mtltoursandtravels@gmail.com
+                                    </a>
+                                </p>
+                            </div>
+
+
+                            <div class="col-lg-5 col-12">
+                                <p class="text-white d-block mb-4">Opening Hours.</p>
+
+                                <ul class="opening-hours-list">
+                                    <li class="d-flex">
+                                        Monday - Friday
+                                        <span class="underline"></span>
+
+                                        <strong>09:00AM — 05:00PM
+
+                                        </strong>
+                                    </li>
+
+                                    <!-- <li class="d-flex">
+                                        Saturday
+                                        <span class="underline"></span>
+
+                                        <strong>11:00 - 16:30</strong>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        Sunday
+                                        <span class="underline"></span>
+
+                                        <strong>Closed</strong>
+                                    </li> -->
+                                </ul>
+                            </div>
+
+                            <!-- <div class="col-lg-8 col-12 mt-4">
+                                <p class="copyright-text mb-0">Copyright © Barista Cafe 2048 
+                                    - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
+                            </div> -->
+                    </div>
+                </footer>
+            </main>
+         
+            <!-- Toast message container -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast" id="toastMessage" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+        <div class="toast-header">
+            <strong class="me-auto">Message Sent</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Your message has been successfully sent!
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- Your custom JavaScript -->
+<script>
+       document.addEventListener('DOMContentLoaded', function() {
+        // Select the form
+        const contactForm = document.getElementById('contactForm');
+        // Add event listener for form submission
+        contactForm.addEventListener('submit', function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+            // Display the toast message
+            const toastMessage = new bootstrap.Toast(document.getElementById('toastMessage'));
+            toastMessage.show();
+            // Clear the form fields
+            contactForm.reset();
+            // Optionally, submit the form via AJAX
+            // Example:
+            // const formData = new FormData(contactForm);
+            // fetch('/your-endpoint', {
+            //     method: 'POST',
+            //     body: formData
+            // }).then(response => {
+            //     if (response.ok) {
+            //         // Display success message
+            //         toastMessage.show();
+            //         // Clear the form fields
+            //         contactForm.reset();
+            //     } else {
+            //         // Handle error
+            //     }
+            // }).catch(error => {
+            //     console.error('Error:', error);
+            // });
+        });
+    });
+</script>
+    </body>
+
+   
+<!-- 
+    <script src="{% static 'js/smartresize.js' %}"></script> -->
+    <style>
+
+        
+
+  </style>
+
+
+
+<script>
+    $(function() {
+      $('.hero-slides').vegas({
+        slides: [
+          { src: '{% static "images/img1.jpg" %}', animation: 'kenburns' },
+          { src: '{% static "images/img0.jpg" %}', animation: 'kenburns' },
+          { src: '{% static "images/img3.jpg" %}', animation: 'kenburns' },
+          { src: '{% static "images/img4.jpg" %}', animation: 'kenburns' },
+          { src: '{% static "images/img51.jpg" %}', animation: 'kenburns' },
+          { src: '{% static "images/img6.jpg" %}', animation: 'kenburns' },
+        ],
+        timer: false
+      });
+    });
+
+
+   
+   
+    $(document).ready(function() {
+    var headings = $('.hero-heading');
+    var subheadings = $('.hero-subheading');
+    var index = 0;
+
+    function showNext() {
+        headings.hide();
+        subheadings.hide();
+        
+        // Show the current heading and its subheading
+        var currentHeading = headings.eq(index);
+        var currentSubheading = subheadings.eq(index);
+        currentHeading.show();
+        currentSubheading.show();
+
+        index = (index + 1) % headings.length;
+    }
+
+    // Show the first heading and subheading initially
+    showNext();
+
+    // Set interval to switch headings and subheadings
+    setInterval(showNext, 6000); // Change the interval as needed
+});
+
+
+
+
+    
+  </script>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #services {
+        background-color: #201c42;
+        color: white;
+        width: 100%;
+    }
+
+    h4{
+        
+        color: white;
+    
+    }
+    #services .services-top {
+        padding: 70px 0 50px;
+    }
+    #services .services-list {
+        padding-top: 50px;
+    }
+    .services-list .service-block {
+        margin-bottom: 25px;
+    }
+    .services-list .service-block .ico {
+        font-size: 38px;
+        float: left;
+    }
+    .services-list .service-block .text-block {
+        margin-left: 58px;
+    }
+    .services-list .service-block .text-block .name {
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 5px;
+    }
+    .services-list .service-block .text-block .info {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+    .services-list .service-block .text-block .text {
+        font-size: 12px;
+        line-height: normal;
+        font-weight: 300;
+    }
+    .highlight {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .custom-card-height {
+    height: 400px; /* Adjust the height as needed */
+}
+
+
+        .hero-section {
+    text-align: center;
+     
+}
+
+.hero-heading {
+    margin-left: 150px; 
+    font-family: "Gill Sans Extrabold", sans-serif;
+  font-size: 80px;
+    margin-top: 22%;
+    text-align: left;
+    
+}
+
+.hero-subheading {
+    color: white;
+    font-family: "Gill Sans Extrabold", sans-serif;
+  font-size: 25px;
+    
+    margin-left: 150px; 
+ 
+    text-align: left;
+}
+/* For screen widths up to 250px */
+@media only screen and (max-width: 250px) {
+    .hero-heading {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .hero-subheading {
+        font-size: 15px;
+        margin-left: 20px;
+    }
+}
+
+/* For screen widths between 251px and 400px */
+@media only screen and (min-width: 251px) and (max-width: 400px) {
+    .hero-heading {
+        font-size: 50px;
+        margin-left: 50px;
+    }
+
+    .hero-subheading {
+        font-size: 18px;
+        margin-left: 50px;
+    }
+}
+
+/* For screen widths between 401px and 600px */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .hero-heading {
+        font-size: 60px;
+        margin-left: 80px;
+    }
+
+    .hero-subheading {
+        font-size: 20px;
+        margin-left: 80px;
+    }
+}
+
+/* For screen widths between 601px and 800px */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    .hero-heading {
+        font-size: 70px;
+        margin-left: 100px;
+    }
+
+    .hero-subheading {
+        font-size: 22px;
+        margin-left: 100px;
+    }
+}
+
+/* For screen widths between 801px and 1000px */
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+    .hero-heading {
+        font-size: 75px;
+        margin-left: 120px;
+    }
+
+    .hero-subheading {
+        font-size: 24px;
+        margin-left: 120px;
+    }
+}
+
+/* For screen widths between 1001px and 1200px */
+@media only screen and (min-width: 1001px) and (max-width: 1100px) {
+    .hero-heading {
+        font-size: 80px;
+        margin-top: 63%;
+        margin-left: 150px;
+    }
+
+    .hero-subheading {
+        font-size: 25px;
+       
+        margin-left: 150px;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1100px) {
+    .hero-heading {
+        font-size: 80px;
+        margin-top: 23%;
+        margin-left: 150px;
+    }
+
+    .hero-subheading {
+        font-size: 25px;
+       
+        margin-left: 150px;
+    }
+}
+@media only screen and (min-width: 1101px) and (max-width: 1200px) {
+    .hero-heading {
+        font-size: 80px;
+        margin-left: 150px;
+    }
+
+    .hero-subheading {
+        font-size: 25px;
+        margin-left: 150px;
+    }
+}
+
+/* For screen widths greater than 1200px */
+@media only screen and (min-width: 1201px) {
+    .hero-heading {
+        font-size: 85px;
+        margin-left: 180px;
+    }
+
+    .hero-subheading {
+        font-size: 26px;
+        margin-left: 180px;
+    }
+}
+
+
+
+  
+
+</style>
+
+    
+</html>

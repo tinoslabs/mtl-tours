@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+            <div class="text"></div>
+        </div>
+        <!-- ======================= Table ================== -->
+
+            <div class="table-1">
+                <div class="table-header">
+                    <p><b>Packages Details</b></p>
+
+                    <a href="admin_add_packages"><button class="add_new">+ Add New</button></a>
+                </div>
+
+                <div class="table-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 150px; align-items: center;">Package Name</th>
+                                <th style="width: 150px; align-items: center;">Price</th>
+                                <th style="width: 400px;">Description</th>
+                                <th style="width: 300px;">Gallery</th>
+                              
+                                <!-- <th>Subject</th> -->
+                                <th style="width: 100px; align-items: center;">Update</th>
+                                <th style="width: 100px; align-items: center;">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for package in packages %}
+                            <tr>
+                                <td>{{package.name}}</td>
+
+                                <td>{{package.price}}</td>
+                            
+                               
+                                <td>{{package.description|safe}}</td>
+                                <td>
+                                    {% if package.images.all %}
+                                        <div class="row">
+                                            {% for image in package.images.all %}
+                                                <img src="{{ image.image.url }}" alt="{{ package.name }}" class="img-fluid">
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        <p>Data not found</p>
+                                    {% endif %}
+                                </td>
+
+                                <td>
+                                    
+                                    <a href="{% url 'admin_update_packages' package.id  %}"><button><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button></a>
+                                </td><td>   <a href="{% url 'admin_delete_packages' package.id  %}"><button><i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+             
+            </div>
+            {% endblock %}
+
+            <style>
+                /* CSS */
+
+
+            </style>

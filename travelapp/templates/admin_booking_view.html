@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+            <div class="text"></div>
+        </div>
+        <!-- ======================= Table ================== -->
+
+            <div class="table-1">
+                <div class="table-header">
+                    <p><b>Booking Details</b></p>
+
+                    <!-- <a href="admin_dashboard"><button class="add_new">+ Add New</button></a> -->
+                </div>
+                <div class="table-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Phone Number </th>
+                                <th>Time</th>
+                                <th>Date</th>
+                                <th>Numbr of People</th>
+                                <th>Category</th>
+                                <th>Package</th>
+                                <th>Message</th>
+                                <th>Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for items in bookings %}
+                            <tr>
+                                <td>{{items.full_name}}</td>
+                            
+                                <td>{{items.phone}}</td>
+                        
+                                <td>{{items.time}}</td>
+
+                                <td>{{items.date}}</td>
+
+                                <td>{{items.num_people}}</td>
+
+                                <td>{{items.category}}</td>
+
+                                <td>{{items.package}}</td>
+
+                                <td>{{items.message}}</td>
+                            
+                                <!-- <td>{{items.message}}</td> -->
+                               
+                            <td>
+                                <a href="{% url 'admin_delete_bookings' items.id  %}"><button><i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                            </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+             
+            </div>
+
+
+    {%endblock%}

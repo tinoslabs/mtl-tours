@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTL Tours And Travels</title>
+       <!-- Box Icons  -->
+       <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+       <link rel="stylesheet" href="{% static 'asset/css/font-awesome.min.css' %}">
+       <!-- Styles  -->
+       <link rel="shortcut icon" href="{% static 'asset/img/kxp_fav.png' %}" type="image/x-icon">
+       <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+       <link rel="stylesheet" href="{% static 'asset/assets/css/style.css' %}">
+         <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="{% static 'ad/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/css/quill.snow.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ad/fonts/line-icons/style.css' %}">
+    
+</head>
+
+
+
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="{% url 'admin_dashboard' %}" class="logo-box">
+           <!-- <img src="{% static 'assets/images/product/logo.png' %}" class="img-fluid" width="70" height="30" alt="Logo"> -->
+           <div class="logo-name">MTL Tours And Travels</div>
+        </a>
+
+             <!-- ========== List ============  -->
+        <!-- <ul class="sidebar-list"> -->
+            <!-- -------- Non Dropdown List Item ------- -->
+            <!-- <li>
+                <div class="title">
+                    <a href="admin_dashboard" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
+                    
+                </div>
+                <div class="submenu">
+                    <a href="admin_dashboard" class="link submenu-title">Dashboard</a>
+                </div>
+            </li> -->
+
+            
+
+            <!-- <li class="dropdown">
+                <div class="title">
+                    <a href="admin_water_dispensers_view" class="link">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="name">Water Dispenser</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="" class="link submenu-title">Water Dispensers</a>
+                    <a href="admin_add_water_dispensers" class="link">Add Water Dispensers</a>
+                    <a href="admin_water_dispensers_view" class="link">View Water Dispensers</a>
+                    
+                </div>
+            </li> -->
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <!-- <li class="dropdown">
+                <div class="title">
+                    <a href="admin_accessories_view" class="link">
+                        <i class='bx bx-collection'></i>
+                        <span class="name">Accessories</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="" class="link submenu-title">Accessories</a>
+                    <a href="admin_add_accessories" class="link">Add Accessories</a>
+                    <a href="admin_accessories_view" class="link">View Accessories</a>
+                    
+                </div>
+            </li> -->
+
+            
+
+            <!-- <li class="dropdown">
+                <div class="title">
+                    <a href="admin_enquiries_view" class="link">
+                        <i class='bx bx-collection'></i>
+                        <span class="name">Enquiries</span>
+                    </a>
+                </div>
+            </li> -->
+
+            <!-- <li>
+                <div class="title">
+                    <a href="admin_enquiries_view" class="link">
+                        
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        <span class="name">Enquiries</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="admin_enquiries_view" class="link submenu-title">Enquiries</a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li> -->
+
+            <!-- <li>
+                <div class="title">
+                    <a href="admin_contact_view" class="link">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="name">Contact History</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="admin_contact_view" class="link submenu-title">Contact History</a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li> -->
+
+
+            <!-- -------- Dropdown List Item ------- -->
+           
+            <!-- {% if user.is_authenticated %}
+            <li>
+                <div class="title">
+                    <a href="logout_user" class="link">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <span class="name">Sign Out</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="logout_user" class="link submenu-title">Sign Out </a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li>
+            {% else %}
+            <li> -->
+                <!-- <div class="title">
+                    <a href="login_user" class="link">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <span class="name">Sign In</span>
+                    </a> -->
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                <!-- </div>
+                <div class="submenu">
+                    <a href="login_user" class="link submenu-title">Sign In</a> -->
+                    <!-- submenu links here  -->
+                <!-- </div>
+            </li>
+            {% endif %}
+        </ul> -->
+    </div>
+    <!-- <title>Add Package - JobBoard</title> -->
+    
+  
+<body>
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+            <div class="text"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Update Categories</div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+    
+                                <div class="form-group">
+                                    <label for="name">Category Name</label>
+                                    <input type="text" class="form-control" id="name" name="heading" placeholder="Category Name" value="{{ categories.heading }}">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="image">Current Featured Image</label>
+                                    {% if categories.image %}
+                                        <img src="{{ categories.image.url }}" alt="Current Image" style="max-width: 10%;">
+                                        <br>
+                                        <input type="checkbox" id="remove_image" name="remove_image">
+                                        <label for="remove_image">Remove Current Image</label>
+                                    {% else %}
+                                        <label for="new_image">Upload Featured Image</label>
+                                    {% endif %}
+                                    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" >
+                                    <small class="text-muted">Please upload an image with dimensions equal to or greater than 3024px x 4032px.</small> 
+                                </div>
+    
+                                <button type="submit" class="btn" style="background: #776cc2; color: aliceblue;">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<script src="{% static 'asset/js/main.js' %}"></script>
+<!-- JavaScript -->
+<script src="{% static 'ad/js/jquery.min.js' %}"></script>
+<script src="{% static 'ad/js/bootstrap.bundle.min.js' %}"></script>
+<!-- Include CKEditor -->
+<script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
+<script src="{% static 'ad/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'ad/js/bootstrap-select.min.js' %}"></script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor-1'))
+        .catch(error => {
+            console.error(error);
+        });
+
+    $(document).ready(function() {
+        // Wrap Isotope initialization in a function
+        function siteIstotope() {
+            var $container = $('#posts'); // Select the container element
+            $container.isotope({ // Initialize Isotope with desired options
+                itemSelector: '.item',
+                layoutMode: 'masonry'
+            });
+        }
+
+        // Call the function after the document has fully loaded
+        siteIstotope(); // Initialize Isotope
+    });
+
+    document.getElementById('product_name').addEventListener('input', function() {
+        var nameInput = this.value;
+        if (nameInput.length > 50) {
+            document.getElementById('name_error').style.display = 'block';
+        } else {
+            document.getElementById('name_error').style.display = 'none';
+        }
+    });
+
+
+    function checkCharacterLimit(textarea) {
+        var maxLength = 400; // Maximum character limit
+        var currentLength = textarea.value.length;
+
+        if (currentLength > maxLength) {
+            document.getElementById('character_error').style.display = 'block';
+        } else {
+            document.getElementById('character_error').style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
+
